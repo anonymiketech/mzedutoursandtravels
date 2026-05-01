@@ -4,6 +4,7 @@ import { Playfair_Display, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { CookieConsent } from "@/components/cookie-consent"
 import { PromotionalManager } from "@/components/promotional-manager"
+import QuoteRequestButton from "@/components/quote-request-button"
 import "./globals.css"
 
 const playfair = Playfair_Display({ subsets: ["latin"] })
@@ -51,6 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <PromotionalManager />
+        <QuoteRequestButton />
         {children}
         <CookieConsent />
         <Analytics />
